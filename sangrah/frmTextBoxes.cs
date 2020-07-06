@@ -31,5 +31,14 @@ namespace sangrah
                 e.Handled = true;
             }
         }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+                //allow only numbers
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
